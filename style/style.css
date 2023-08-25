@@ -1,0 +1,136 @@
+@import url(style-global.css);
+
+header {
+    background-color: var(--cor-white);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    top: 0;
+}
+
+header.sticky {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.074), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.015), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #f4f4f4;
+    background-color: var(--cor-white);
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+}
+
+.content-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.9rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-background);
+    font-weight: 400;
+    position: relative;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--cor-principal);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+nav a:hover:after{
+    width: 100%;
+}
+
+nav span {
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    justify-content: end;
+}
+
+.main-container {
+    width: 85%;
+    height: 100vh;
+    background-image: url(../assetsImage/background-main.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: center;
+}
+
+.content-main {
+    width: 50%;
+    height: 65%;
+
+}
+
+.slogan {
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .content-navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    nav {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {     
+        gap: 10px; 
+        padding: 5px 0; 
+    }
+
+    nav {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav a, nav span {
+        font-size: 14px;
+    }
+}
+ 
+/* FIM DA NAVBAR COM RESPONSIVIDADE */
