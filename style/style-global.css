@@ -13,7 +13,7 @@
 }
 
 :root {
-    --cor-background: #1E1E1E;
+    --cor-background: #131D29;
     --cor-principal: #EA1D2C;
     --cor-white: #ffffff;
     --cor-green: #48B774;
@@ -29,7 +29,6 @@ body {
 .container{
     width: 70%;
     margin: 0 auto;
-    /* border: 1px solid red; */
 }
 
 body::-webkit-scrollbar {
